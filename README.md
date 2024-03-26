@@ -4,7 +4,7 @@ A Django web application that allows users to calculate their GPA by entering su
 
 ## Features
 
-- User Authentication: Register and login functionality to keep your subject entries private and secure.
-- Subject Management: Add, edit, and delete subject entries including their name, grade, and credit hours.
-- GPA Calculation: Automatically calculates your GPA based on the subjects and grades entered.
-- PDF Generation: Generate a PDF version of your GPA report for printing or saving.
+- **User Authentication**: Register and login functionality to keep your subject entries private and secure.
+- **Subject Management**: Add, edit, and delete subject entries including their name, grade, and credit hours.
+- **GPA Calculation**: Automatically calculates your GPA based on the subjects and grades entered.
+- **PDF Generation**: Generate a PDF version of your GPA report for printing or saving.
