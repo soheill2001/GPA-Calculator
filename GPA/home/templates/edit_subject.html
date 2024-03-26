@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ 
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url('{%static 'edit3.jpg'%}');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+ 
+        #calculator {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            color:rgba(255,255,255,0.8)
+        }
+ 
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+ 
+        button {
+            padding: 10px;
+            color: black;
+            border: 0.5px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            background-color:rgba(160,160,160,0.8);
+        }
+ 
+        a {
+            color: black;
+        }
+    </style>
+ 
+ 
+    <div id="calculator">
+        <br>
+ 
+        <h2 style="text-align: center;">Edit Subject</h2>
+        <br>
+        <form method="post" action="{% url 'edit_subject' subject_id=subject_id %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+ 
+            <button type="submit">Save Changes</button>
+        </form>
+        <br>
+        <button><a href="{% url 'cgpa_calculator' %}">Cancel</a></button>
+ 
+    </div>
+</body>
+ 
+</html>
